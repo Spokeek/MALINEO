@@ -10,7 +10,10 @@ module.exports = function(defaults) {
         css: {
           'app': '/assets/malineo.css'
         }
-      },
+      }
+    },
+    'ember-bootstrap': {
+      'importBootstrapCSS': false
     }
   });
   // Use `app.import` to add additional libraries to the generated
