@@ -1,8 +1,8 @@
-<div class="container">
-<h1>Titre</h1>
-<h4>Indeterminate mode</h4>
-{{paper-progress-circular}}
-{{#link-to 'app.login'}}Login{{/link-to}}<br/>
-{{#link-to 'app.register'}}Register{{/link-to}}
-{{outlet}}
-</div>
+  <div id="header">
+    <img class="img-responsive" src="/imgs/logo.png"/>
+    {{#link-to 'app.login'}}Login{{/link-to}}
+    {{#link-to 'app.register'}}Register{{/link-to}}
+  </div>
+  <div id="main-container">
+    {{outlet}}
+  </div>

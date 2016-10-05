@@ -1,2 +1,12 @@
-REGISTER PAGE
+<div class="col-xs-12 text-center"><h2>REGISTER PAGE</h2></div>
+<div class="col-xs-10 col-xs-offset-1">
+{{paper-input label="Nickname" value=nickname}}
+{{paper-input label="First name" value=fname}}
+{{paper-input label="Last name" value=lname}}
+{{paper-input label="Email" type="email" value=email customValidation=emailValidation}}
+{{paper-input label="Password" type="password" value=password}}
+{{paper-input label="Password (again)" type="password" value=password2 }}
+{{paper-input label="Birth date" type="date" value=birth}}
+{{#paper-button raised=true primary=true}}Login{{/paper-button}}
+</div>
 {{outlet}}
