@@ -1,4 +1,13 @@
-<div id="add-new-location">
-  <h2>Ajouter un nouveau lieu</h2>
-  Emplacement: {{g-autocomplete class="col-xs-10" value=address on-select=(action 'didUpdatePlace')}} <button class="col-xs-2" {{action "fetchLocation"}}>Geolocalisation</button>
+<div id="add-new-location" class="container">
+  <h2 class="text-center">Ajouter un nouveau lieu</h2>
+  <div class="flex">
+    <div class="col-xs-4">Emplacement:</div>
+    {{g-autocomplete id="autocomplete-location" class="col-xs-6" value=address on-select=(action 'didUpdatePlace')}}
+    {{#paper-button class="col-xs-2" action="fetchLocation" icon-button=true}}{{paper-icon "explore"}}{{/paper-button}}
+  </div>
+  <div class="flex">
+    <div class="col-xs-4">Photo:</div>
+    {{#paper-button class="col-xs-2 col-xs-offset-2" icon-button=true}}{{paper-icon "monochrome-photos"}}{{/paper-button}}
+    {{#paper-button class="col-xs-2 col-xs-offset-2" icon-button=true}}{{paper-icon "more-horiz"}}{{/paper-button}}
+  </div>
 </div>
