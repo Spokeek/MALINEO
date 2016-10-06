@@ -8,7 +8,7 @@ export default Ember.Route.extend({
         id: 'unique-id', // Recommended
         lat: 32.75494243654723, // Required
         lng: -86.8359375, // Required
-        click: function(event, marker) {
+        click: function(event) {
           alert(event.label);
         },
         clickable: true,
@@ -17,6 +17,6 @@ export default Ember.Route.extend({
         title: 'string',
         visible: true,
       }])
-    })
+    });
   }
 });

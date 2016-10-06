@@ -4,7 +4,7 @@ export default Ember.Controller.extend({
   email: "",
   password: "",
   canNotLogin: function () {
-    var test = this.get('email') == "" || this.get('password') == "";
+    var test = this.get('email') === "" || this.get('password') === "";
     return test?true:null;
   }.property("email", "password"),
   actions: {
