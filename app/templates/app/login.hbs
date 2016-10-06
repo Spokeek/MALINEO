@@ -1,6 +1,6 @@
-<div class="col-xs-12 text-center"><h2>LOGIN PAGE</h2></div>
+<div class="col-xs-12 text-center"><h2>Connexion utilisateur</h2></div>
 <div class="col-xs-10 col-xs-offset-1">
-{{paper-input label="Login (email)" type="email" value=email icon="email" required=true}}
-{{paper-input label="Password" type="password" value=password icon="lock" required=true}}
-{{#paper-button raised=true primary=true action=login}}Login{{/paper-button}}
+<div class="col-xs-12">{{paper-input label="Login (email)" type="email" value=email icon="email" required=true}}</div>
+<div class="col-xs-12">{{paper-input label="Password" type="password" value=password icon="lock" required=true}}</div>
+<div class="col-xs-12">{{#paper-button class="full-width" raised=true primary=true action=login disabled=canNotLogin}}Connexion{{/paper-button}}</div>
 </div>

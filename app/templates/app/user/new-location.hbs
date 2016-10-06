@@ -1,13 +1,23 @@
 <div id="add-new-location" class="container">
   <h2 class="text-center">Ajouter un nouveau lieu</h2>
-  <div class="flex">
-    <div class="col-xs-4">Emplacement:</div>
-    {{g-autocomplete id="autocomplete-location" class="col-xs-6" value=address on-select=(action 'didUpdatePlace')}}
-    {{#paper-button class="col-xs-2" action="fetchLocation" icon-button=true}}{{paper-icon "explore"}}{{/paper-button}}
-  </div>
-  <div class="flex">
-    <div class="col-xs-4">Photo:</div>
-    {{#paper-button class="col-xs-2 col-xs-offset-2" icon-button=true}}{{paper-icon "monochrome-photos"}}{{/paper-button}}
-    {{#paper-button class="col-xs-2 col-xs-offset-2" icon-button=true}}{{paper-icon "more-horiz"}}{{/paper-button}}
+  <div class="flex-table">
+    <div class="flex-row">
+      <div class="flex-cell col-xs-3">Nom:</div>
+      <div class="flex-cell col-xs-9">{{paper-input label="name"}}</div>
+    </div>
+    <div class="flex-row">
+      <div class="flex-cell col-xs-3">Adresse:</div>
+      <div class="flex-cell col-xs-4">{{#paper-button action="fetchLocation" icon-button=true}}{{paper-icon "explore"}}{{/paper-button}}</div>
+      {{g-autocomplete id="autocomplete-location" class="flex-cell col-xs-5" value=address on-select=(action 'didUpdatePlace')}}
+    </div>
+    <div class="flex-row">
+      <div class="flex-cell col-xs-3">Photo:</div>
+      <div class="flex-cell col-xs-4">{{#paper-button icon-button=true}}{{paper-icon "monochrome-photos"}}{{/paper-button}}</div>
+      <div class="flex-cell col-xs-4 col-xs-offset-1">{{#paper-button icon-button=true}}{{paper-icon "more-horiz"}}{{/paper-button}}</div>
+    </div>
+    <div class="flex-row">
+      <div class="flex-cell col-xs-3">Contact:</div>
+      <div class="flex-cell col-xs-9">{{paper-input label="contact"}}</div>
+    </div>
   </div>
 </div>
