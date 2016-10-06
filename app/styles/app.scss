@@ -1,6 +1,31 @@
 @import 'ember-paper';
 @import 'bootstrap';
 
-.full-width{
-  width: 100%;
+$dark-primary-color:    #303F9F;
+$default-primary-color: #3F51B5;
+$light-primary-color:   #C5CAE9;
+$text-primary-color:    #FFFFFF;
+$accent-color:          #FF5252;
+$primary-text-color:    #212121;
+$secondary-text-color:  #757575;
+$divider-color:         #BDBDBD;
+
+
+$header-right-section-width: 75px;
+#header{
+  height: 120px;
+  background-color: $light-primary-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .left{
+    img{
+      margin: auto;
+      height: 100px;
+    }
+    width: calc(100% - #{$header-right-section-width};
+  }
+  .right{
+    width: $header-right-section-width;
+  }
 }

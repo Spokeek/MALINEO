@@ -1,7 +1,16 @@
   <div id="header">
-    <img class="img-responsive" src="/imgs/logo.png"/>
-    {{#link-to 'app.login'}}Login{{/link-to}}
-    {{#link-to 'app.register'}}Register{{/link-to}}
+    <div class="left pull-left">
+      {{#link-to "app"}}
+      <img class="img-responsive" src="/imgs/logo.png"/>
+      {{/link-to}}
+    </div>
+    <div class="right pull-left">
+      {{#paper-menu position="target-right target" as |menu|}}
+        {{#paper-button target=menu action="toggleMenu" icon-button=true}}{{paper-icon "menu" class="md-menu-origin"}}{{/paper-button}}
+      {{else}}
+        {{#paper-menu-item action="openLogin"}}Login{{/paper-menu-item}}
+      {{/paper-menu}}
+    </div>
   </div>
   <div id="main-container">
     {{outlet}}
