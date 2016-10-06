@@ -12,8 +12,13 @@ $divider-color:         #BDBDBD;
 
 
 $header-right-section-width: 75px;
+$header-height: 120px;
+$show-map-switch-height: 30px;
+
+html, body, body > .ember-view:not(.md-open-menu-container){ height: 100%; width: 100%; margin: 0; }
+
 #header{
-  height: 120px;
+  height: $header-height;
   background-color: $light-primary-color;
   display: flex;
   align-items: center;
@@ -23,9 +28,25 @@ $header-right-section-width: 75px;
       margin: auto;
       height: 100px;
     }
-    width: calc(100% - #{$header-right-section-width};
+    width: calc(100% - #{$header-right-section-width});
   }
   .right{
     width: $header-right-section-width;
   }
+}
+
+#main-container{
+  height: calc(100% - #{$header-height});
+}
+
+#show-map-switch{
+    height: $show-map-switch-height;
+}
+
+#mapContainer{
+  height: calc(100% - #{$show-map-switch-height}*2);
+}
+
+.ember-cli-g-map{
+  height: 100%;
 }

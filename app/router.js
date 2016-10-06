@@ -10,6 +10,9 @@ Router.map(function() {
   this.route("app", function(){
     this.route("login", {path: "login"});
     this.route("register", {path: "register"});
+    this.route('user', function() {
+      this.route('new-location');
+    });
   });
   this.route("url-not-defined", {path: "*path"});
 });

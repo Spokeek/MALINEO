@@ -1,1 +1,7 @@
-{{outlet}}
+{{#paper-switch id="show-map-switch" checked=showMap}}{{#if showMap}}Mode carte{{else}}Mode liste{{/if}}{{/paper-switch}}
+<div id="mapContainer">
+{{#if showMap}}
+  {{g-maps lat=37.7833 lng=-122.4167 zoom=12 markers=markers}}
+{{else}}
+  {{/if}}
+</div>

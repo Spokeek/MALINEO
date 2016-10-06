@@ -1,0 +1,4 @@
+<div id="add-new-location">
+  <h2>Ajouter un nouveau lieu</h2>
+  Emplacement: {{g-autocomplete class="col-xs-10" value=address on-select=(action 'didUpdatePlace')}} <button class="col-xs-2" {{action "fetchLocation"}}>Geolocalisation</button>
+</div>

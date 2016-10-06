@@ -44,12 +44,17 @@ module.exports = function(environment) {
 
   ENV.contentSecurityPolicy = {
     'default-src': "'none'",
-    'script-src': "'self' 'unsafe-inline'",
-    'style-src': "'self' 'unsafe-inline' https://fonts.googleapis.com",
+    'script-src': "'self' 'unsafe-inline' 'unsafe-eval' *.googleapis.com maps.gstatic.com" ,
+    'style-src': "'self' 'unsafe-inline' fonts.googleapis.com maps.gstatic.com",
     'font-src': "'self' fonts.gstatic.com",
     'connect-src': "'self'",
-    'img-src': "'self' data:",
+    'img-src': "'self' data: *.googleapis.com maps.gstatic.com csi.gstatic.com",
     'media-src': "'self'"
+  }
+
+  ENV.googleMap = {
+    apiKey: 'AIzaSyBEqj_24vZQxmXQJ0_OzxwlBTyEf9uKM4o',
+    libraries: ['places']
   }
 
   return ENV;
