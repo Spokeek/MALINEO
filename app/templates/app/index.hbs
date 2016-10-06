@@ -3,5 +3,8 @@
 {{#if showMap}}
   {{g-maps lat=37.7833 lng=-122.4167 zoom=12 markers=markers}}
 {{else}}
-  {{/if}}
+{{#each elem in model}}
+new elem<br/>
+{{/each}}
+{{/if}}
 </div>
